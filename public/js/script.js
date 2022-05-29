@@ -10,7 +10,7 @@ result.setAttribute('hidden', 'true')
 weather.addEventListener('submit', event => {
     event.preventDefault();
 
-    const url = 'http://localhost:3000/weather?address=' + input.value;
+    const url = '/weather?address=' + input.value;
     input.value = '';
 
     fetch(url).then(res => res.json())
