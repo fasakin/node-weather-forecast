@@ -1,3 +1,4 @@
+console.log("this is the main function")
 import express from 'express';
 import path from 'path';
 import {fileURLToPath} from 'url';
