@@ -1,10 +1,9 @@
-console.log("this is the main function")
 import express from 'express';
 import path from 'path';
 import {fileURLToPath} from 'url';
 import hbs from 'hbs';
 import geocode from './utils/resolveGeocode.js'
-import forcast from './utils/weatherforcast.js'
+import forecast from './utils/weatherforcast.js'
 
 const app = express();
 
@@ -59,7 +58,7 @@ app.get('/weather', (req, res) => {
             return res.send(error);
         }
 
-        forcast({...result}, (e, forcastData) => {
+        forecast({...result}, (e, forcastData) => {
             if (error) {
                 return res.send(e);
             }
